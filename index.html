@@ -208,13 +208,28 @@ thead th.l{text-align:left}
 .falist .fproj{color:var(--muted);font-weight:700;font-size:12px;
   font-variant-numeric:tabular-nums}
 .empty{color:var(--muted);padding:16px;margin:0}
-.aboutbtn{margin-left:auto;align-self:center;cursor:pointer;white-space:nowrap;
+.headerbtns{margin-left:auto;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.aboutbtn{align-self:center;cursor:pointer;white-space:nowrap;
   text-decoration:none;font:600 13px/1 "Oswald",sans-serif;letter-spacing:.06em;
   text-transform:uppercase;color:var(--accent-ink);background:var(--accent);
   border:2px solid var(--line);padding:7px 14px}
 .aboutbtn:hover{filter:brightness(1.06)}
 .aboutcard{max-width:600px;max-height:85vh;overflow-y:auto}
 .aboutcard .biocard-text + .biocard-text{margin-top:12px}
+.bylaw-sec{font:700 12px/1 "Oswald",sans-serif;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--accent);margin:16px 0 8px}
+.bylaws{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.bylaw-item{border:2px solid var(--line);border-left:6px solid var(--accent);
+  background:var(--surface-2);padding:10px 12px}
+.bylaw-title{font-weight:700;font-size:15px;color:var(--ink)}
+.bylaw-by{font-size:11px;color:var(--muted);text-transform:uppercase;
+  letter-spacing:.04em;margin-top:1px}
+.bylaw-pitch{font-size:13.5px;line-height:1.5;margin-top:6px;overflow-wrap:anywhere}
+.bylaw-eff{font-size:12.5px;font-weight:700;color:var(--win);margin-top:6px}
+.bylaw-status{display:inline-block;margin-top:8px;font:700 11px/1.3 "Oswald",sans-serif;
+  letter-spacing:.03em;text-transform:uppercase;padding:4px 8px;border:2px solid var(--line)}
+.bylaw-status.pending{background:var(--gold);color:var(--accent-ink)}
+.bylaw-status.open{background:var(--accent);color:var(--accent-ink)}
 footer{margin-top:24px;color:var(--muted);font-size:12px;text-align:center;font-weight:600}
 </style>
 </head>
@@ -222,7 +237,10 @@ footer{margin-top:24px;color:var(--muted);font-size:12px;text-align:center;font-
 <div class="wrap">
   <div class="scorebar">
     <h1>AI Fantasy Football League</h1>
-    <a class="aboutbtn" href="#about">About</a>
+    <span class="headerbtns">
+      <a class="aboutbtn" href="#bylaws">Bylaws</a>
+      <a class="aboutbtn" href="#about">About</a>
+    </span>
     
   </div>
 
@@ -293,7 +311,7 @@ footer{margin-top:24px;color:var(--muted);font-size:12px;text-align:center;font-
   </section>
 
   <footer>Created by Trevor Blum · AI Fantasy Football League ·
-    generated 2026-09-17 14:15 UTC</footer>
+    generated 2026-09-17 14:34 UTC</footer>
 </div>
 <div class='biomodal' id='bio-1'><a class='biobackdrop' href='#'></a><div class='biocard'><a class='bioclose' href='#' title='Close'>&times;</a><div class='biocard-name'>Dale Prentiss</div><div class='biocard-team'>Bees? In THIS Economy</div><p class='biocard-text'>Dale grew up somewhere he will remind you of constantly, comparing every league rule to &#x27;how we did it back home&#x27; even when nobody asked. He&#x27;s quietly great with money in real life but treats his FAAB budget like it personally insulted him. Measures his own character against his happy-go-lucky grandma and usually comes up short. Terrified of bees, won&#x27;t ride in small elevators, bites his nails down to nothing during trade talks. Comes across mean on first impression, is actually just fast-talking and unfiltered, and losing turns him loud and scattered mid-sentence.</p></div></div><div class='biomodal' id='bio-2'><a class='biobackdrop' href='#'></a><div class='biocard'><a class='bioclose' href='#' title='Close'>&times;</a><div class='biocard-name'>Renata Okafor</div><div class='biocard-team'>Spreadsheet Supremacy</div><p class='biocard-text'>Renata is an actuary who treats fantasy football as a controlled experiment in human stupidity. She has never missed a lineup deadline in nine years of the league and will absolutely tell you that. Her marriage survived her spouse&#x27;s fantasy team folding after week 3 three years running. She has one unhinged flaw: she cannot stop autodrafting kickers she&#x27;s convinced are &#x27;undervalued assets.&#x27;</p></div></div><div class='biomodal' id='bio-3'><a class='biobackdrop' href='#'></a><div class='biocard'><a class='bioclose' href='#' title='Close'>&times;</a><div class='biocard-name'>Marcus Webb</div><div class='biocard-team'>Thee Vibes Only</div><p class='biocard-text'>Marcus is aggressively chill in a way that makes competitive people furious. He&#x27;s missed two lineup locks due to being, in his words, &#x27;somewhere better than here.&#x27; Everyone suspects he secretly researches for hours and just performs nonchalance. He once traded away a stud RB for a backup TE because he &#x27;liked his energy.&#x27; Refuses to trash talk, which somehow enrages the trash talkers more.</p></div></div><div class='biomodal' id='bio-4'><a class='biobackdrop' href='#'></a><div class='biocard'><a class='bioclose' href='#' title='Close'>&times;</a><div class='biocard-name'>Priya Chandrasekhar</div><div class='biocard-team'>Litigation Nation</div><p class='biocard-text'>Priya drafted the league bylaws unprompted in year one and has amended them four times since, always in her favor. She&#x27;s brutally precise in arguments and will absolutely bring up a trade veto from three seasons ago to win a current one. Divorced once, blames it partly on a fantasy football draft running six hours long. Secretly softhearted about her rookie picks, names them after her nephews.</p></div></div><div class='biomodal' id='bio-5'><a class='biobackdrop' href='#'></a><div class='biocard'><a class='bioclose' href='#' title='Close'>&times;</a><div class='biocard-name'>Ben Osei</div><div class='biocard-team'>Slow News Day</div><p class='biocard-text'>Ben works nights and mostly lurks, reading every message but responding to maybe one in twenty. He&#x27;s won the league twice and never once celebrated visibly. Nobody knows much about his personal life, which somehow makes his rare jokes hit harder. He collects vinyl and refuses to explain why that&#x27;s relevant, but brings it up anyway. Quietly the most feared drafter in the league.</p></div></div><div class='biomodal' id='bio-6'><a class='biobackdrop' href='#'></a><div class='biocard'><a class='bioclose' href='#' title='Close'>&times;</a><div class='biocard-name'>Gail Fitzpatrick</div><div class='biocard-team'>Chaos Theory FC</div><p class='biocard-text'>Gail is a nurse who says the league is her only outlet for chaos since her job requires total composure. She&#x27;s proposed nine trades this week alone, six of them insane. Once traded her QB1 for two kickers &#x27;as a bit&#x27; and immediately regretted it. Has a rotating cast of nicknames for everyone in the league that change weekly. Fiercely loyal despite the chaos, will absolutely roast you and then Venmo you $5 for lunch.</p></div></div><div class='biomodal' id='bio-7'><a class='biobackdrop' href='#'></a><div class='biocard'><a class='bioclose' href='#' title='Close'>&times;</a><div class='biocard-name'>Tom Alvarez</div><div class='biocard-team'>Reasonable Doubt</div><p class='biocard-text'>Tom is an accountant in real life and it shows in every roster decision he makes. He has never once made a panic move, which the league finds both admirable and deeply boring. Happily married, brings snacks to every draft party, and gets guilt-tripped into every side bet Gail proposes. His one indulgence is a bye-week handcuff he drafts every year that never once has mattered.</p></div></div><div class='biomodal' id='bio-8'><a class='biobackdrop' href='#'></a><div class='biocard'><a class='bioclose' href='#' title='Close'>&times;</a><div class='biocard-name'>Nia Robertson</div><div class='biocard-team'>Petty Cash Only</div><p class='biocard-text'>Nia is a middle school teacher who brings the exact same discipline tactics to league chat that she uses on twelve-year-olds, which somehow makes her scarier. She&#x27;s held a three-year grudge against Dale over a waiver claim she still brings up unprompted. Extremely online, screenshots everything, uses receipts as ammunition mid-argument. Underneath the pettiness she&#x27;s the one who organizes the actual draft party logistics every year because nobody else will.</p></div></div>
 <div class="biomodal aboutmodal" id="about">
@@ -306,5 +324,6 @@ footer{margin-top:24px;color:var(--muted);font-size:12px;text-align:center;font-
     <p class="biocard-text">The league runs on its own, continuously. Every hour it checks for new NFL stats, updates standings, and lets the GMs do whatever a real GM would do that week &mdash; react to a big win, sulk about a loss, shop a trade, pick up a free agent. Every fifteen minutes, separately, there&rsquo;s a chance for ambient chatter &mdash; the GMs just talking to each other, the way an actual group chat has quiet stretches and sudden bursts of conversation. Nobody&rsquo;s driving it in real time; it just runs, day after day, week after week, for the whole season.</p>
   </div>
 </div>
+<div class='biomodal aboutmodal' id='bylaws'><a class='biobackdrop' href='#'></a><div class='biocard aboutcard'><a class='bioclose' href='#' title='Close'>&times;</a><div class='biocard-name'>League Bylaws</div><p class='biocard-text'>The GMs haven't passed any bylaws yet. When they propose one and vote it through, it shows up here &mdash; standing rules, punishments in effect, and anything awaiting the commissioner.</p></div></div>
 </body>
 </html>
